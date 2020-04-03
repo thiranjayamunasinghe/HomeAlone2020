@@ -15,6 +15,7 @@
 .seal {
   width: 150px;
   height: 150px;
+  padding-top: 15px;
 }
 .logo {
   display: block;
@@ -31,11 +32,13 @@ img.ifsuLogo {
   width: 310px;
   height: 200px;
   padding-left: 20px;
+  padding-top: -20px;
   padding-bottom: -20px;
   margin-bottom: -20px;
   align-content: center;
 }
 img.homeAloneLogo {
+  padding-top: -20px;
   padding-bottom: -20px;
   margin-bottom: -20px;
   width: 310px;

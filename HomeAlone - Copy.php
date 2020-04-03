@@ -78,7 +78,7 @@ require_once __DIR__ . '/vendor/autoload.php';
      <div>
         <table align="center"  style="margin-top:0px;margin-left: 0px;margin-bottom:0px;padding-bottom:0px;">
         <tr>
-          <td> <div class="ifsuHomeAlone">
+          <td> <div>
             <img class="seal"  src="C:\xampp\htdocs\my\HomeAlone\assets\star.png">
           </div></td>
         </tr>
