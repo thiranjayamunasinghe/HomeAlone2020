@@ -1,0 +1,53 @@
+.signature,
+.title {
+  float: left;
+  border-top: 1px solid #000;
+  width: 200px;
+  text-align: center;
+}
+@page {
+  background-image: url("C:\xampp\htdocs\my\HomeAlone\assets\background.jpg");
+  background-image-resize: 6;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-image-opacity: 0.1;
+}
+.seal {
+  width: 150px;
+  height: 150px;
+}
+.logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+.ifsuHomeAlone {
+  width: 250px;
+  height: 150px;
+}
+
+img.ifsuLogo {
+  width: 310px;
+  height: 200px;
+  padding-left: 20px;
+  padding-bottom: -20px;
+  margin-bottom: -20px;
+  align-content: center;
+}
+img.homeAloneLogo {
+  padding-bottom: -20px;
+  margin-bottom: -20px;
+  width: 310px;
+  height: 300px;
+}
+u.dotted {
+  border-bottom: 2px dotted #000;
+  text-decoration: none;
+}
+.changePadding {
+  padding-top: 7px;
+}
+.bigFontChangPadding {
+  padding-top: 4px;
+}
