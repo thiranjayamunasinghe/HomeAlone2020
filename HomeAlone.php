@@ -18,8 +18,10 @@ echo ">Connected successfully";
 require_once __DIR__ . '/vendor/autoload.php';
 
 $mpdf = new \Mpdf\Mpdf(['orientation' => 'P']);
-$mpdf->WriteHTML('
 
+$name='Thiranjaya';
+$competition='HomeAlone 2020';
+$html='
 <center>
 <style>
 .signature, .title { 
@@ -35,15 +37,15 @@ float:left;
        <br><br>
        <span style="font-size:25px"><i>This is to certify that</i></span>
        <br><br>
-       <span style="font-size:30px"><b>$student.getFullName()</b></span><br/><br/>
+       <span style="font-size:30px"><b>'.$name.'</b></span><br/><br/>
        <span style="font-size:25px"><i>has completed the course</i></span> <br/><br/>
-       <span style="font-size:30px">$course.getName()</span> <br/><br/>
+       <span style="font-size:30px">'.$competition.'</span> <br/><br/>
        <span style="font-size:20px">with score of <b>$grade.getPoints()%</b></span> <br/><br/><br/><br/>
        <span style="font-size:25px"><i>Completed Date</i></span><br>
        <span style="font-size:25px"><i>01-Sep-2018</i></span><br>
 <table style="margin-top:40px;float:left">
 <tr>
-<td><span><b>$student.getFullName()</b></td>
+<td><span><b>'.$name.'</b></td>
 </tr>
 <tr>
 <td style="width:200px;float:left;border:0;border-bottom:1px solid #000;"></td>
@@ -54,7 +56,7 @@ float:left;
 </table>
 <table style="margin-top:40px;float:right">
 <tr>
-<td><span><b>$student.getFullName()</b></td>
+<td><span><b>'.$name.'</b></td>
 </tr>
 <tr>
 <td style="width:200px;float:right;border:0;border-bottom:1px solid #000;"></td>
@@ -65,11 +67,9 @@ float:left;
 </table>
 </div>
 </div>
-</center>
- 
+</center>';
 
-
-');
+$mpdf->WriteHTML($html);
 $mpdf->Output();
 
 ?>
