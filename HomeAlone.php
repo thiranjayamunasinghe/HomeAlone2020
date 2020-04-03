@@ -2,7 +2,14 @@
 <html>
 
 <?php
-$servername = "localhost";
+if(isset($_POST['send']))
+{
+if (isset($_POST['email'])) 
+{
+   $email = $_POST['email'];
+   
+   
+   $servername = "localhost";
 $username = "root";
 $password = "";
 $dbName='homealone';
@@ -20,7 +27,8 @@ require_once __DIR__ . '/vendor/autoload.php';
 
 $mpdf = new \Mpdf\Mpdf(['orientation' => 'P']);
 
-$sql="select * from users where id =1";
+
+$sql="select * from users where email = '".$email."'";
 $result=$conn->query($sql);
 
 
@@ -85,9 +93,13 @@ float:left;
  $mpdf->WriteHTML($html);
  $mpdf->Output();
 }
+}
+}
 
 
-// $name=$result['name'];
+
+
+
 
 
 
