@@ -5,9 +5,10 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
+$dbName='homealone';
 
 // Create connection
-$conn = new mysqli($servername, $username, $password);
+$conn = new mysqli($servername, $username, $password,$dbName);
 
 // Check connection
 if ($conn->connect_error) {
@@ -19,8 +20,18 @@ require_once __DIR__ . '/vendor/autoload.php';
 
 $mpdf = new \Mpdf\Mpdf(['orientation' => 'P']);
 
-$name='Thiranjaya';
+$sql="select * from users where id =1";
+$result=$conn->query($sql);
+
+
+if($result->num_rows >0){
+$row=$result->fetch_assoc();
+echo $row['name'];
+$name=$row['name'];
 $competition='HomeAlone 2020';
+
+
+
 $html='
 <center>
 <style>
@@ -69,8 +80,16 @@ float:left;
 </div>
 </center>';
 
-$mpdf->WriteHTML($html);
-$mpdf->Output();
+
+
+ $mpdf->WriteHTML($html);
+ $mpdf->Output();
+}
+
+
+// $name=$result['name'];
+
+
 
 ?>
 </html>
