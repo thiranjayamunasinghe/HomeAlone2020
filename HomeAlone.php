@@ -6,11 +6,7 @@
 require_once __DIR__ . '/vendor/autoload.php';
 
 
-if(isset($_POST['send']))
-{
-if (isset($_POST['email'])) 
-{
-   $email = $_POST['email'];
+   $email = $_GET['email'];
    
    
   $servername = "localhost";
@@ -97,13 +93,7 @@ if (isset($_POST['email']))
     $mpdf->Output();
     }
     echo "<br><h4>Email not found</h4></br>";
-  }else{
-    
-    echo "<br>Something went wrong. Please try again</br>";
-  }
-}else{
-  echo "<br>Something went wrong. Please try again</br>";
-}
+  
 
 ?>
 </html>
